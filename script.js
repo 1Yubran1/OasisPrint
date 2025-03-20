@@ -26,25 +26,25 @@ document.addEventListener("DOMContentLoaded", function() {
             titulo: "Camisa Negra", 
             talla: "S, M, L, XL", 
             precio: "$15", 
-            imagen: "camisa_negra.jpg", 
+            imagen: "img/logo.jpg", 
             descripcion: "Camisa de algodón 100% negra, ideal para cualquier ocasión.",
-            imagenes: ["camisa_negra_1.jpg", "camisa_negra_2.jpg", "camisa_negra_3.jpg"]
+            imagenes: ["img/logo.jpg", "img/logo.jpg", "img/logo.jpg"]
         },
         { 
             titulo: "Camisa Blanca", 
             talla: "S, M, L", 
             precio: "$14", 
-            imagen: "camisa_blanca.jpg", 
+            imagen: "img/logo.jpg", 
             descripcion: "Clásica camisa blanca de alta calidad, cómoda y fresca.",
-            imagenes: ["camisa_blanca_1.jpg", "camisa_blanca_2.jpg"]
+            imagenes: ["img/logo.jpg", "img/logo.jpg"]
         },
         { 
             titulo: "Camisa Roja", 
             talla: "M, L, XL", 
             precio: "$16", 
-            imagen: "camisa_roja.jpg", 
+            imagen: "img/logo.jpg", 
             descripcion: "Camisa roja vibrante con tela transpirable.",
-            imagenes: ["camisa_roja_1.jpg", "camisa_roja_2.jpg"]
+            imagenes: ["img/logo.jpg", "img/logo.jpg"]
         }
     ];
 
