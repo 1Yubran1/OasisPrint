@@ -1,0 +1,57 @@
+body {
+    background: linear-gradient(to right, #F8C8DC, #B5EAD7);
+    font-family: Arial, sans-serif;
+}
+
+.logo {
+    width: 150px;
+}
+
+h2 {
+    color: #333;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+body {
+    background: linear-gradient(to right, #F8C8DC, #B5EAD7);
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #333;
+}
+
+.card {
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.modal img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.modal-body img {
+    margin: 5px;
+    max-height: 100px;
+    cursor: pointer;
+}
+
+.modal-body img:hover {
+    opacity: 0.7;
+}
