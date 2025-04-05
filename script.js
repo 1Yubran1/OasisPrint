@@ -26,25 +26,25 @@ document.addEventListener("DOMContentLoaded", function() {
             titulo: "Camisa Negra", 
             talla: "S, M, L, XL", 
             precio: "$15", 
-            imagen: "img/logo.jpg", 
+            imagen: "img/logo.jpeg", 
             descripcion: "Camisa de algodón 100% negra, ideal para cualquier ocasión.",
-            imagenes: ["img/logo.jpg", "img/logo.jpg", "img/logo.jpg"]
+            imagenes: ["img/logo.jpeg", "img/logo.jpeg", "img/logo.jpeg"]
         },
         { 
             titulo: "Camisa Blanca", 
             talla: "S, M, L", 
             precio: "$14", 
-            imagen: "img/logo.jpg", 
+            imagen: "img/logo.jpeg", 
             descripcion: "Clásica camisa blanca de alta calidad, cómoda y fresca.",
-            imagenes: ["img/logo.jpg", "img/logo.jpg"]
+            imagenes: ["img/logo.jpeg", "img/logo.jpeg"]
         },
         { 
             titulo: "Camisa Roja", 
             talla: "M, L, XL", 
             precio: "$16", 
-            imagen: "img/logo.jpg", 
+            imagen: "img/logo.jpeg", 
             descripcion: "Camisa roja vibrante con tela transpirable.",
-            imagenes: ["img/logo.jpg", "img/logo.jpg"]
+            imagenes: ["img/logo.jpeg", "img/logo.jpeg"]
         }
     ];
 
@@ -78,8 +78,18 @@ document.addEventListener("DOMContentLoaded", function() {
             const imgElement = document.createElement("img");
             imgElement.src = img;
             imgElement.alt = producto.titulo;
-            imgElement.onclick = () => { modalImagenPrincipal.src = img };
+            imgElement.classList.add("img-thumbnail", "mx-2", "imagen-pequena"); // Clase para imágenes pequeñas
+            imgElement.dataset.imagen = img; // Asignar el atributo data-imagen
+
+            imgElement.addEventListener("click", function() {
+                document.querySelectorAll("#modalImagenesSecundarias .imagen-pequena").forEach(function(imagen) {
+                    imagen.classList.remove("active");
+                });
+                imgElement.classList.add("active"); // Clase activa para resaltar
+                modalImagenPrincipal.src = imgElement.dataset.imagen;
+            });
+
             modalImagenesSecundarias.appendChild(imgElement);
         });
-    }
+    };
 });

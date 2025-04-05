@@ -1,57 +1,165 @@
+/* Estilos generales */
 body {
-    background: linear-gradient(to right, #F8C8DC, #B5EAD7);
-    font-family: Arial, sans-serif;
+    background-color: #F8F9FA !important;
+    color: #343A40;
+    font-family: 'Poppins', sans-serif;
 }
 
+/* Ajustes para el logo */
 .logo {
-    width: 150px;
+    width: 120px;
 }
 
-h2 {
+h1, h2 {
     color: #333;
 }
 
-img {
-    max-width: 100%;
-    border-radius: 10px;
-}
-
-body {
-    background: linear-gradient(to right, #F8C8DC, #B5EAD7);
-    font-family: Arial, sans-serif;
-}
-
-h1 {
-    color: #333;
-}
-
+/* Estilos para la galería */
 .card {
-    margin-bottom: 20px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .card:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
 }
 
-.card img {
-    max-height: 200px;
+/* Navbar estilizada */
+.navbar {
+    background: linear-gradient(to right, #0077B6, #00A8E8);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand, .nav-link {
+    color: white !important;
+}
+
+.nav-link {
+    position: relative;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #F4A261 !important;
+}
+
+.nav-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #F4A261;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* ====== MODAL ====== */
+.modal .carousel-inner {
+    width: 100%;
+    height: 400%;
+    display: flex;
+}
+
+/* Personaliza el carrusel dentro del modal */
+#carouselCamisas {
+    width: 50%;         /* Cambia el tamaño según lo que necesites (50% en este caso) */
+    margin: 0 auto;     /* Centra el carrusel dentro del modal */
+}
+
+#carouselGorras {
+    width: 50%;         /* Cambia el tamaño según lo que necesites (50% en este caso) */
+    margin: 0 auto;     /* Centra el carrusel dentro del modal */
+}
+
+#carouselPlatos {
+    width: 50%;         /* Cambia el tamaño según lo que necesites (50% en este caso) */
+    margin: 0 auto;     /* Centra el carrusel dentro del modal */
+}
+
+#carouselTazas {
+    width: 50%;         /* Cambia el tamaño según lo que necesites (50% en este caso) */
+    margin: 0 auto;     /* Centra el carrusel dentro del modal */
+}
+
+#carouselTermos {
+    width: 50%;         /* Cambia el tamaño según lo que necesites (50% en este caso) */
+    margin: 0 auto;     /* Centra el carrusel dentro del modal */
+}
+
+/* Ajustes de las imágenes dentro del carrusel */
+#carouselCamisas .carousel-item img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-}
-
-.modal img {
-    max-width: 100%;
-    height: auto;
     border-radius: 10px;
 }
 
-.modal-body img {
-    margin: 5px;
-    max-height: 100px;
-    cursor: pointer;
+
+#carouselGorras .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
+
+#carouselPlatos .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+#carouselTazas .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+#carouselTermos .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+/* Limita el ancho del modal */
+.modal-dialog {
+    max-width: 700px;
+}
+
+/* Hover opcional en imágenes del modal */
 .modal-body img:hover {
     opacity: 0.7;
+}
+
+/* Tamaño y centrado del carrusel si lo usas fuera del modal */
+.custom-carousel {
+    width: 30%;
+    height: auto;
+    margin: 0 auto;
 }

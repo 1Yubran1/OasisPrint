@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,28 +8,31 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/logo.jpeg" type="image/jpeg">
 </head>
+
 <body>
 
     <!-- ENCABEZADO -->
     <header class="text-center py-4">
-        <img src="img/logo.jpg" alt="OasisPrint Logo" class="logo">
+        <img src="img/logo.jpeg" alt="OasisPrint Logo" class="logo">
     </header>
 
     <!-- NAVEGACIÓN -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="index.html">OasisPrint</a>
+            <a class="navbar-brand fw-bold" href="index.html">OasisPrint</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="catalogo.html">Catalogo</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#comentarios">Comentarios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="preguntas.html">Preguntas </a></li>
                 </ul>
             </div>
         </div>
@@ -38,53 +42,245 @@
     <section id="servicios" class="container text-center my-5">
         <h2>Nuestros Servicios</h2>
         <p>Personalizamos camisas, tazas, termos, gorras, platos y más.</p>
-        <div class="row">
-            <div class="col-md-4"><img src="img/logo.jpg" class="img-fluid" alt="Camisas"></div>
-            <div class="col-md-4"><img src="img/logo.jpg" class="img-fluid" alt="Tazas"></div>
-            <div class="col-md-4"><img src="img/logo.jpg" class="img-fluid" alt="Gorras"></div>
+        <div class="row g-4">
+            <!-- Camisas -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/playeras/playera1.jpg" class="card-img" alt="Camisas" data-bs-toggle="modal"
+                        data-bs-target="#modalCamisas">
+                </div>
+            </div>
+
+            <!-- Gorras -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/gorras/gorra1.jpg" class="card-img" alt="Gorras" data-bs-toggle="modal"
+                        data-bs-target="#modalGorras">
+                </div>
+            </div>
+
+            <!-- Platos -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/platos/plato1.jpg" class="card-img" alt="Plato" data-bs-toggle="modal"
+                        data-bs-target="#modalPlatos">
+                </div>
+            </div>
+
+            <!-- Tazas -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/tazas/taza1.jpg" class="card-img" alt="Tazas" data-bs-toggle="modal"
+                        data-bs-target="#modalTazas">
+                </div>
+            </div>
+
+            <!-- Termos -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/termos/termo1.jpg" class="card-img" alt="Termos" data-bs-toggle="modal"
+                        data-bs-target="#modalTermos">
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- SECCIÓN GALERÍA -->
-    <section id="galeria" class="container text-center my-5">
-        <h2>Galería de Trabajos</h2>
-        <p>Mira algunos de nuestros diseños personalizados.</p>
-        <div class="row">
-            <div class="col-md-4"><img src="img/logo.jpg" class="img-fluid" alt="Trabajo 1"></div>
-            <div class="col-md-4"><img src="img/logo.jpg" class="img-fluid" alt="Trabajo 2"></div>
-            <div class="col-md-4"><img src="img/logo.jpg" class="img-fluid" alt="Trabajo 3"></div>
+    <!-- Modal Camisas -->
+    <div class="modal fade" id="modalCamisas" tabindex="-1">
+        <div class="modal-dialog modal-md modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Diseños de playeras personalizadas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="carouselCamisas" class="carousel slide custom-carousel" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/playeras/playera1.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/playeras/playera2.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/playeras/playera3.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/playeras/playera4.jpg" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselCamisas"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselCamisas"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
 
-    <!-- SECCIÓN CONTACTO -->
-    <section id="contacto" class="container text-center my-5">
-        <h2>Contacto</h2>
-        <p>¡Escríbenos para personalizar tus productos!</p>
-        <form>
-            <input type="text" class="form-control my-2" placeholder="Nombre">
-            <input type="email" class="form-control my-2" placeholder="Correo Electrónico">
-            <textarea class="form-control my-2" placeholder="Mensaje"></textarea>
-            <button class="btn btn-primary">Enviar</button>
-        </form>
-    </section>
 
-    <!-- SECCIÓN COMENTARIOS -->
-    <section id="comentarios" class="container text-center my-5">
-        <h2>Comentarios</h2>
-        <div id="comentariosLista"></div>
-        <input type="text" id="comentarioInput" class="form-control my-2" placeholder="Escribe tu comentario">
-        <button onclick="agregarComentario()" class="btn btn-secondary">Enviar</button>
-    </section>
+    <!-- Modal Gorras -->
+    <div class="modal fade" id="modalGorras" tabindex="-1">
+        <div class="modal-dialog modal-md modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Diseños de gorras personalizadas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="carouselGorras" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/gorras/gorra1.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/gorras/gorra2.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/gorras/gorra3.jpg" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselGorras"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselGorras"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Platos -->
+    <div class="modal fade" id="modalPlatos" tabindex="-1">
+        <div class="modal-dialog modal-md modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Diseños de platos personalizados</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="carouselPlatos" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/platos/plato1.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/platos/plato2.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/platos/plato3.jpg" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPlatos"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselPlatos"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Tazas -->
+    <div class="modal fade" id="modalTazas" tabindex="-1">
+        <div class="modal-dialog modal-md modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Diseños de tazas personalizadas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="carouselTazas" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/tazas/taza1.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/tazas/taza2.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/tazas/taza3.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/tazas/taza4.jpg" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselTazas"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselTazas"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Termos -->
+    <div class="modal fade" id="modalTermos" tabindex="-1">
+        <div class="modal-dialog modal-md modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Diseños de termos personalizados</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="carouselTermos" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/termos/termo1.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/termos/termo2.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/termos/termo3.jpg" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselTermos"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselTermos"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- FOOTER -->
-    <footer class="text-center py-4">
-        <p>Síguenos en redes sociales</p>
-        <a href="#" class="mx-2">Facebook</a>
-        <a href="#" class="mx-2">Instagram</a>
-        <a href="#" class="mx-2">WhatsApp</a>
+    <footer class="text-center py-4" style="background-color: #0077B6; color: white;">
+        <p class="mb-2">Síguenos en redes sociales</p>
+        <a href="#" class="mx-2 text-white fs-4"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="mx-2 text-white fs-4"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="mx-2 text-white fs-4"><i class="bi bi-whatsapp"></i></a>
     </footer>
+
+    <!-- Agregar Bootstrap Icons (si aún no los tienes en tu proyecto) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>
